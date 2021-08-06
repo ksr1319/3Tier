@@ -1,0 +1,5 @@
+C:\Users\satheesh reddy\Desktop\mahitha\3TierAsp\BussinessObject\bin\Debug\BussinessObject.dll
+C:\Users\satheesh reddy\Desktop\mahitha\3TierAsp\BussinessObject\bin\Debug\BussinessObject.pdb
+C:\Users\satheesh reddy\Desktop\mahitha\3TierAsp\BussinessObject\obj\Debug\BussinessObject.dll
+C:\Users\satheesh reddy\Desktop\mahitha\3TierAsp\BussinessObject\obj\Debug\BussinessObject.pdb
+C:\Users\satheesh reddy\Desktop\mahitha\3TierAsp\BussinessObject\obj\Debug\BussinessObject.csprojResolveAssemblyReference.cache

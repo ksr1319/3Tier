@@ -1,0 +1,7 @@
+C:\Users\satheesh reddy\Desktop\mahitha\3TierAsp\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\satheesh reddy\Desktop\mahitha\3TierAsp\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\satheesh reddy\Desktop\mahitha\3TierAsp\DataAccess\bin\Debug\BussinessObject.dll
+C:\Users\satheesh reddy\Desktop\mahitha\3TierAsp\DataAccess\bin\Debug\BussinessObject.pdb
+C:\Users\satheesh reddy\Desktop\mahitha\3TierAsp\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\satheesh reddy\Desktop\mahitha\3TierAsp\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\satheesh reddy\Desktop\mahitha\3TierAsp\DataAccess\obj\Debug\DataAccess.pdb

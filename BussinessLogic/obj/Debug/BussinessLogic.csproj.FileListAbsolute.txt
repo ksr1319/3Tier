@@ -1,0 +1,9 @@
+C:\Users\satheesh reddy\Desktop\mahitha\3TierAsp\BussinessLogic\bin\Debug\BussinessLogic.dll
+C:\Users\satheesh reddy\Desktop\mahitha\3TierAsp\BussinessLogic\bin\Debug\BussinessLogic.pdb
+C:\Users\satheesh reddy\Desktop\mahitha\3TierAsp\BussinessLogic\bin\Debug\BussinessObject.dll
+C:\Users\satheesh reddy\Desktop\mahitha\3TierAsp\BussinessLogic\bin\Debug\DataAccess.dll
+C:\Users\satheesh reddy\Desktop\mahitha\3TierAsp\BussinessLogic\bin\Debug\BussinessObject.pdb
+C:\Users\satheesh reddy\Desktop\mahitha\3TierAsp\BussinessLogic\bin\Debug\DataAccess.pdb
+C:\Users\satheesh reddy\Desktop\mahitha\3TierAsp\BussinessLogic\obj\Debug\BussinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\satheesh reddy\Desktop\mahitha\3TierAsp\BussinessLogic\obj\Debug\BussinessLogic.dll
+C:\Users\satheesh reddy\Desktop\mahitha\3TierAsp\BussinessLogic\obj\Debug\BussinessLogic.pdb
