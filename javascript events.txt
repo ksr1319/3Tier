@@ -1,0 +1,236 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="StudentRegistration.aspx.cs" Inherits="SqlCommandClass.StudentRegistration" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+    </style>
+    <script type="text/javascript">
+        function onlyAlphabets(event)
+        {
+            var charcode = (event.which) ? event.which : event.keyCode;
+            if ((charcode < 65 || charcode > 90) && (charcode < 97 || charcode > 122) && charcode != 32) {
+                alert("Enter Alphabets only");
+                return false;
+            }
+        }
+        
+
+       
+        function onlyintegers(event)
+        {
+            event = (event) ? event : window.event;
+            var charCode = (event.which) ? event.which : event.keyCode;
+            if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                alert("Enter numbers only");
+                return false;
+            }
+           
+        }
+        function validations() {
+            
+            var summary = "";
+            var temp = document.getElementById("TextBox7").value;
+            if(temp =="")
+            {
+                summary = "Name is manadatory \n";
+            }
+            if (document.getElementById("DropDownList1").value == "0") {
+                summary += "please select your section \n";
+            }
+            var sex = document.getElementsByName('G1');
+
+            if (!(sex[0].checked || sex[1].checked))
+            {
+                summary += "Please Select Your Gender \n";
+            }
+            var listbox = document.getElementById("Listbox1"),
+             length = listbox.length,
+              SelectedItemCount = 0;
+
+            for (var i = 0; i <length; i++) {
+
+                if (document.getElementById("Listbox1").options[i].selected) {
+
+                    SelectedItemCount = SelectedItemCount + 1;
+
+                }
+                
+            }
+            if (SelectedItemCount < 2) {
+                summary += "please select atlest 2 subjects \n";
+            }
+            var checkbox1 = document.getElementById("CheckBox1"), checkbox2 = document.getElementById("CheckBox2"), checkbox3 = document.getElementById("CheckBox3")
+            if (!checkbox1.checked && !checkbox2.checked && !checkbox3.checked)
+            {
+                summary +="please select hobies \n";
+            }
+            var marks1 = document.getElementById('TextBox3').value, marks2 = document.getElementById('TextBox4').value, marks3 = document.getElementById('TextBox5').value;
+            debugger;
+            if(marks1 =='')
+            {
+                summary += "please enter marks1 \n";
+            }
+            else if(marks1 > 100)
+            {
+                summary += "marks1 shouldnot greater than 100 \n";
+            }
+            if(marks2 == '') {
+                summary += "please enter marks2 \n";
+            }
+            else if(marks2 > 100)
+            {
+                summary += "marks2 shouldnot greater than 100 \n";
+            } if(marks3 == '') {
+                summary += "please enter marks3 \n";
+            }
+            else if(marks3 > 100)
+            {
+                summary += "marks3 shouldnot greater than 100 \n";
+            }
+            if (summary==true) {
+                alert(summary);
+            }
+        }
+        function Addition()
+        {
+           
+            var marks1 = document.getElementById('TextBox3').value, marks2 = document.getElementById('TextBox4').value, marks3 = document.getElementById('TextBox5').value, total = eval(document.getElementById("TextBox8"));
+            if (marks1 == '' && marks2 == '' && marks3 == '') {
+                total.value = "";
+            }
+            else {
+                if (marks1 == '')
+                    marks1 = 0;
+                if (marks2 == '')
+                    marks2 = 0;
+                if (marks3 == '')
+                    marks3 = 0;
+                total.value = parseInt(marks1) + parseInt(marks2) + parseInt(marks3);
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server"> 
+    <div>
+    
+        <table class="auto-style1">
+            <tr>
+                <td colspan="2"><center>Student Registration</center></td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>
+                    <asp:TextBox ID="TextBox7" runat="server" onkeypress="return onlyAlphabets(event)"></asp:TextBox>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td>
+                    <asp:TextBox ID="TextBox2" runat="server" TextMode="Number"></asp:TextBox>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <asp:RadioButton ID="RadioButton1" runat="server" GroupName="G1" Text="Male" AutoPostBack="True"  />
+                    <asp:RadioButton ID="RadioButton2" runat="server" GroupName="G1" Text="Female" AutoPostBack="True" />
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Section</td>
+                <td>
+                    <asp:DropDownList ID="DropDownList1" runat="server">
+                        <asp:ListItem Value="0">Select section</asp:ListItem>
+                        <asp:ListItem>A</asp:ListItem>
+                        <asp:ListItem>B</asp:ListItem>
+                    </asp:DropDownList>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Subject</td>
+                <td>
+                    <%--<asp:ListBox ID="ListBox1" runat="server" SelectionMode="Multiple">
+                        <asp:ListItem  Text="Telugu" Value="Telugu"></asp:ListItem>
+                        <asp:ListItem Text="Hindhi" Value="Hindhi"></asp:ListItem>
+                        <asp:ListItem  Text="English" Value="English"></asp:ListItem>
+                        <asp:ListItem  Text="Maths" Value="Maths"></asp:ListItem>
+                    </asp:ListBox>--%>
+       <asp:ListBox ID="Listbox1" runat="server" SelectionMode="Multiple">
+    <asp:ListItem Text="Telugu" Value="Telugu"></asp:ListItem>
+    <asp:ListItem Text="english" Value="english"></asp:ListItem>
+    <asp:ListItem Text="Hindhi" Value="Hindhi"></asp:ListItem>
+    <asp:ListItem Text="Maths" Value="Maths"></asp:ListItem>
+    </asp:ListBox>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Hobies</td>
+                <td>
+                    <asp:CheckBox ID="CheckBox1" runat="server" Text="Cricket" />
+                    <asp:CheckBox ID="CheckBox2" runat="server" Text="Chess" />
+                    <asp:CheckBox ID="CheckBox3" runat="server" Text="Reading Books" />
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Marks1</td>
+                <td>
+                    <asp:TextBox ID="TextBox3" runat="server" onblur="return Addition()" onkeypress="return onlyintegers(event)"></asp:TextBox>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Marks2</td>
+                <td>
+                    <asp:TextBox ID="TextBox4" runat="server" onblur="return Addition()" onkeypress="return onlyintegers(event)"></asp:TextBox>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Marks3</td>
+                <td>
+                    <asp:TextBox ID="TextBox5" runat="server" onblur="return Addition()" onkeypress="return onlyintegers(event)"></asp:TextBox>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td>
+                    
+                    <asp:TextBox ID="TextBox8" runat="server" ReadOnly="True"></asp:TextBox>
+                    
+                 </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+                    <asp:Button ID="Button1" Text="Save" runat="server" value="click" OnClick="Button1_Click" OnClientClick="return validations();"/>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+    
+    </div>
+    </form>
+</body>
+</html>
